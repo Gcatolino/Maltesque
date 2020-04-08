@@ -1,117 +1,35 @@
-\documentclass[sigconf,review]{acmart}
+% !TeX spellcheck = en_US
 
-\usepackage{color}
-\usepackage{multirow}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\usepackage{booktabs}
-\usepackage{balance}
-\usepackage{float}
+\documentclass[sigconf, final]{acmart}
+
 \usepackage{enumitem}
-\usepackage{tcolorbox}
-\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{xspace}
+\usepackage{balance}
+\usepackage[super]{nth}
 
-\usepackage{tikz}
-%\usepackage{lipsum}
-
-\definecolor{gray50}{gray}{.5}
-\definecolor{gray40}{gray}{.6}
-\definecolor{gray30}{gray}{.7}
-\definecolor{gray20}{gray}{.8}
-\definecolor{gray10}{gray}{.9}
-\definecolor{gray05}{gray}{.95}
-
-\newlength\Linewidth
-\def\findlength{\setlength\Linewidth\linewidth
-	\addtolength\Linewidth{-4\fboxrule}
-	\addtolength\Linewidth{-3\fboxsep}
-}
-
-\newcommand\fk[1]{{{\textcolor{red}{Foutse: }}\color{red}#1}}
-\newcommand\ps[1]{{{\textcolor{red}{Pasquale: }}\color{red}#1}}
-\newcommand\gc[1]{{{\textcolor{red}{Gemma: }}\color{red}#1}}
-
-%%
-%% \BibTeX command to typeset BibTeX logo in the docs
-\AtBeginDocument{%
-	\providecommand\BibTeX{{%
-			\normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
-
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-\setcopyright{acmcopyright}
-\copyrightyear{2020}
-\acmYear{2020}
-\acmDOI{10.1145/1122445.1122456}
-
-%% These commands are for a PROCEEDINGS abstract or paper.
-%\acmConference[ICSE 2020]{ICSE 2020: IEEE/ACM International Conference on Software Engineering}{May 23--29, 2020}{Seoul, South Korea}
-%\acmBooktitle{ICSE 2020: IEEE/ACM International Conference on Software Engineering, May 23--29, 2020 - Seoul, South Korea}
-%\acmPrice{15.00}
-%\acmISBN{978-1-4503-9999-9/18/06}
-
-\newcommand{\ie}{\emph{i.e.},\xspace}
-\newcommand{\eg}{\emph{e.g.},\xspace}
-\newcommand{\etc}{\emph{etc.}\xspace}
-\newcommand{\etal}{\emph{et al.}\xspace}
-\newcommand{\aka}{\emph{a.k.a.}\xspace}
+\newcommand{\ie}{i.e.,\@\xspace}
+\newcommand{\eg}{e.g.,\@\xspace}
+\newcommand{\etc}{etc.\@\xspace}
+\newcommand{\etal}{et al.\@\xspace}
 
 \newenvironment{myquote}[1]%
   {\list{}{\leftmargin=#1\rightmargin=#1}\item[]}%
   {\endlist}
 
 \begin{document}
-	\title{MaLTeSQuE: Machine Learning Techniques \\
-		for Software Quality Evaluation}
-	\subtitle{A workshop proposal for ESEC/FSE 2020 -- \url{https://maltesque2019.github.io}}
-	
-	\author{Gemma Catolino}
-	\affiliation{%
-		\institution{Delft University of Technology}
-		\city{Delft}
-		\state{The Netherlands}
-	}
-	\email{g.catolino@tudelft.nl}
-	
-		
-	
-	\author{Pasquale Salza}
-	\affiliation{%
-		\institution{University of Zurich}
-		\city{Zurich}
-		\state{Switzerland}
-	}
-	\email{salza@ifi.uzh.ch}
 
-\author{Foutse Khomh$^*$}
-	\affiliation{%
-		\institution{Polytechnique Montréal}
-		\city{Montréal}
-		\state{Canada}
-	}
-	\email{foutse.khomh@polymtl.ca}
-	
-	%\renewcommand{\shortauthors}{}
-	
+\title{MaLTeSQuE: Machine Learning Techniques\\for Software Quality Evaluation}
+\subtitle{A workshop proposal for ESEC/FSE 2020 -- \url{https://maltesque2019.github.io}}
+
+\input{authors}
 
 \begin{abstract}
-% Limit: 175 words
 We propose the 5$^{th}$ edition of the workshop on Machine Learning Techniques for Software Quality Evaluation (MaLTeSQuE) to be collocated with the next edition of ESEC/FSE 2020.
 We aim at creating an enthusiastic forum for researchers and practitioners to present and discuss new ideas, trends and results concerning the application of machine learning methods for software quality evaluation, and the application of software engineering techniques to self-learning systems.
 \end{abstract}
 
-%%
-%% Keywords. The author(s) should pick words that accurately describe
-%% the work being presented. Separate the keywords with commas.
 \keywords{Software Engineering, Machine Learning, Software Quality}
 
-%%
-%% This command processes the author and affiliation and title
-%% information and builds the first part of the formatted document.
 \maketitle
 
 \input{motivation}
@@ -120,9 +38,8 @@ We aim at creating an enthusiastic forum for researchers and practitioners to pr
 \input{submission}
 \input{publicity}
 \input{followup}
-\input{organizers}
 
 \balance
+\input{organizers}
 	
 \end{document}
-\endinput
